@@ -1,0 +1,38 @@
+{
+  "name": "ring-webhook-kit",
+  "version": "0.1.0",
+  "description": "Sign, verify, parse, simulate and receive Ring Partner API webhooks. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Heeseong (Mike) Kim",
+  "repository": "github:mikey92/ring-webhook-kit",
+  "keywords": [
+    "ring",
+    "webhook",
+    "hmac",
+    "amazon",
+    "doorbell",
+    "simulator"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "ring-webhook": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "samples"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test 'test/*.test.ts'"
+  }
+}
